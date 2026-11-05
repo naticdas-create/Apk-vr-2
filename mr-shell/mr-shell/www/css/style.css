@@ -1,0 +1,36 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden;background:#000;font-family:system-ui,"Segoe UI",Roboto,sans-serif;color:#eee;user-select:none;touch-action:none}
+#cam{position:fixed;inset:0;width:100%;height:100%;object-fit:cover}#cam.mirror{transform:scaleX(-1)}
+#skel{position:fixed;inset:0;pointer-events:none}
+#space{position:fixed;inset:0;perspective:1100px;pointer-events:none}
+#handui{position:fixed;inset:0;perspective:900px;pointer-events:none}.hidden{display:none}
+#cursor{position:fixed;left:0;top:0;width:22px;height:22px;border-radius:50%;border:2px solid #fff;background:rgba(255,255,255,.15);pointer-events:none;opacity:0;z-index:99;transition:width .1s,height .1s,background .1s}
+#cursor.on{width:12px;height:12px;background:#fff}
+#start{position:fixed;inset:0;background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:100;gap:6px}
+#start button{font-size:18px;padding:12px 36px;border-radius:999px;border:0;background:#e8e8e8;color:#111;margin-top:8px}
+.win{position:absolute;pointer-events:auto;background:rgba(42,44,47,.94);border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden}
+.bar{height:34px;flex:none;display:flex;align-items:center;justify-content:center;position:relative;font-size:12px;color:#ddd;touch-action:none}
+.ctl{position:absolute;right:12px;display:flex;gap:8px}.ctl button{all:unset;width:24px;height:24px;text-align:center;line-height:24px;border-radius:50%;font-size:13px}
+.hov{background-color:rgba(255,255,255,.16)}.card.hov,.ico.hov{background-color:transparent}
+.body{flex:1;min-height:0;display:flex}.grip{position:absolute;right:0;bottom:0;width:32px;height:32px;touch-action:none}
+.grip::after{content:"";position:absolute;right:9px;bottom:9px;width:10px;height:10px;border-right:3px solid #aaa;border-bottom:3px solid #aaa;border-radius:0 0 6px 0}
+.lib{display:flex;flex:1;min-width:0}aside{width:27%;padding:12px 10px;background:#232427;display:flex;flex-direction:column;gap:6px}
+.side{padding:9px 12px;border-radius:10px;font-size:13px;display:flex;gap:8px;align-items:center}.side.on{background:#e8e8e8;color:#111}
+.side input{all:unset;width:100%;font-size:13px}
+main{flex:1;padding:6px 16px 0;display:flex;flex-direction:column;min-width:0}
+.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:600;font-size:15px}
+.pill{all:unset;background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px;font-size:12px;margin-left:8px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 12px;overflow:auto;flex:1;align-content:start;scrollbar-width:none}
+.card{transition:transform .15s}.card.hov{transform:scale(1.06)}.card.press{transform:scale(.97)}
+.cover{aspect-ratio:16/9;border-radius:12px;display:grid;place-items:center;font-size:30px;position:relative}
+.star{position:absolute;right:6px;top:2px;font-size:14px}.nm{font-size:11px;text-align:center;margin-top:5px;color:#ddd}.empty{grid-column:1/-1;opacity:.6;padding:30px;text-align:center}
+.set{flex:1;padding:8px 18px;overflow:auto}.row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,.06)}.row b{display:inline-block;min-width:46px;text-align:center}
+.stub{flex:1;display:flex;align-items:center;justify-content:center;gap:16px;text-align:center}.cover.big{width:90px;font-size:40px}.stub small{opacity:.6}
+.panel{position:absolute;left:0;top:0;width:380px;transform-origin:0 0;pointer-events:auto;backface-visibility:visible}
+.dock{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(36,38,42,.93);box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#5a6a8a,#1a2030);flex:none}
+.status{display:flex;gap:8px;font-size:12px;background:rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;flex:none}
+.ico{all:unset;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:19px;background:rgba(255,255,255,.1);position:relative;flex:none;transition:transform .15s}
+.ico.hov{transform:scale(1.18)}.ico.press{transform:scale(.94)}.bell i{position:absolute;right:-2px;top:-2px;font-size:9px;font-style:normal;background:#e8e8e8;color:#111;border-radius:50%;width:15px;height:15px;line-height:15px;text-align:center}
+.sep{width:1px;height:26px;background:rgba(255,255,255,.25);flex:none}
+.grab{width:90px;height:6px;border-radius:3px;background:#eee;margin:14px auto 0}
